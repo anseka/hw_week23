@@ -1,0 +1,44 @@
+.tariffs-container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 30px;
+}
+
+.tariff-card {
+	padding: 20px;
+	border-radius: 10px;
+	text-align: center;
+	width: 200px;
+	height: 300px;
+	background-color: lightgray;
+}
+
+.tariff-card.highlighted {
+	margin-left: -19px;
+	background-color: red;
+	color: black;
+	font-weight: bold;
+	height: 320px;
+	box-shadow: 10px 5px 5px grey;
+	margin-right: -9px;
+}
+
+.price {
+	font-size: 24px;
+	background-color: white;
+	margin-left: -19px;
+	width: 238px;
+}
+
+.speed,
+.traffic {
+	font-size: 14px;
+	background-color: azure;
+	margin-left: -19px;
+	width: 238px;
+}
+
+span {
+	font-size: 44px;
+}
