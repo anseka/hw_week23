@@ -1,5 +1,6 @@
-import Tariff from './components/tariff';
-import './components/tariff.css';
+import React, { useState } from 'react';
+import Tariff from './components/Tariff';
+import './components/Tariff.css';
 
 function App() {
 	const tariffs = [
@@ -9,15 +10,19 @@ function App() {
 		{ name: 'Безлимитный 1000', price: 1000, speed: 200 },
 	];
 
+	const [selectedTariff, setSelectedTariff] = useState(null);
+
 	return (
 		<div className='tariffs-container'>
 			{tariffs.map((tariff) => (
 				<Tariff
 					key={tariff.price}
-					name={tariff.name}
-					price={tariff.price}
-					speed={tariff.speed}
-					isHighlighted={tariff.price === 550}
+					// name={tariff.name}
+					// price={tariff.price}
+					// speed={tariff.speed}
+					isSelected={selectedTariff === tariff.price}
+					onSelect={() => setSelectedTariff(tariff.price)}
+					{...tariff}
 				/>
 			))}
 		</div>

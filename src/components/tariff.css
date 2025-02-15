@@ -42,3 +42,7 @@
 span {
 	font-size: 44px;
 }
+
+.selected {
+	border: 3px solid blue;
+}
